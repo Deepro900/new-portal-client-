@@ -1,9 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import NewsSummaryCard from '../Shared/NewsSummaryCard/NewsSummaryCard';
 
 const Home = () => {
+    const allNews = useLoaderData();
     return (
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates iusto dicta hic quisquam iste quae, suscipit recusandae quasi nobis perspiciatis sit porro cupiditate laudantium similique modi quibusdam aspernatur sunt aperiam.</p>
+
+            <h2>Dragon News {allNews.length}</h2>
+            {
+                allNews.map(news => <NewsSummaryCard
+                    key={news._id}
+                    news={news}
+                ></NewsSummaryCard>)
+            }
         </div>
     );
 };
