@@ -6,8 +6,14 @@ const NewsSummaryCard = ({ news }) => {
     const { _id, title, author, details, image_url, total_view } = news;
     console.log(news);
     return (
-        <Card className="">
-            <Card.Header>Featured</Card.Header>
+        <Card className="mb-5">
+
+            <Card.Header>
+                <div>
+
+                </div>
+
+            </Card.Header>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Img variant="top" src={image_url} />

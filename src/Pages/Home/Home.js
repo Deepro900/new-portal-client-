@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
 
-            <h2>Dragon News {allNews.length}</h2>
+            <h2>Daily News {allNews.length}</h2>
             {
                 allNews.map(news => <NewsSummaryCard
                     key={news._id}
